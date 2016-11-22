@@ -1,1 +1,318 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>lmitchell4</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <!-- Bootstrap notes: 
+      I selected these custom features when creating the bootstrap files:
+      Common CSS: Typography, Grid System, Responsive utilities.
+      Components: Navs, Navbar.
+      JavaScript components: Component animations (for JS) (includes Collapse),  Modal.
+      jQuery plugins: Modals, Collapse, Transitions.
+      
+      And I set @grid-float-breakpoint to 550px.
+    -->
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div id="username" class="col-md-12 col-sm-12 text-left">
+          <h1 id="username" class="text-thin title-super">lmitchell4</h1>
+        </div>
+      </div>
+      
+      <!-- Bootstrap Navigation Bar -->
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-items" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="nav-items">
+            <ul class="nav navbar-nav">
+              <li class="menu-item"><a id="python-sec" class="menu-text" href="#">Python<span class="sr-only">(current)</span></a></li>
+              <li class="menu-item"><a id="java-sec" class="menu-text" href="#java">Java</a></li>
+              <li class="menu-item"><a id="r-sec" class="menu-text" href="#r">R</a></li>
+              <li class="menu-item"><a id="javascript-sec" class="menu-text" href="#javascript">JavaScript</a></li>
+            </ul>
+            <!-- <form class="navbar-form navbar-right"> -->
+              <!-- <div class="form-group"> -->
+                <!-- <input type="text" class="form-control" placeholder="Search"> -->
+              <!-- </div> -->
+              <!-- <button type="submit" class="btn btn-default">Submit</button> -->
+            <!-- </form> -->
+          </div>
+        </div>
+      </nav>
+      
+      <!-- Main Project Tiles -->
+      <div id="featured_work" class="row">
+        <div class="col-md-12">
+          <h2 class="text-muted">Python</h2>
+        </div>
+      </div>
+      
+      <div class="row text-center">
+        <div class="col-md-4">
+          <img src="img/tournament.png" class="img-responsive center-block project-logo" alt="Tournament Organizer Logo"
+              data-toggle="modal" data-target="#tournament">
+          <h3>Tournament Organizer</h3>
+          <p><a href="https://github.com/lmitchell4/swiss-pairing " target="_blank">Check out Tournament Organizer</a></p>
+        </div>
+        <div class="col-md-4">
+          <img src="img/blog.png" class="img-responsive center-block project-logo" alt="Alpha Blog Logo"
+            data-toggle="modal" data-target="#blog">
+          <h3>Alpha Blog</h3>
+          <p><a href="https://github.com/lmitchell4/alpha-blog" target="_blank">Check out Alpha Blog</a></p>
+        </div>
+        <div class="col-md-4">
+          <img src="img/fresh_tomatoes.png" class="img-responsive center-block project-logo" alt="Fresh Tomatoes Logo"
+            data-toggle="modal" data-target="#movie">
+          <h3>Fresh Tomatoes</h3>
+          <p><a href="https://github.com/lmitchell4/fresh-tomatoes" target="_blank">Check out Fresh Tomatoes</a></p>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="text-muted">Java</h2>
+        </div>
+      </div>
+      <div id="java" class="row text-center">
+        <div class="col-md-4">
+          <img src="img/tasker.png" class="img-responsive center-block project-logo" alt="Tasker Logo"
+            data-toggle="modal" data-target="#tasker">
+          <h3>Tasker</h3>
+          <p><a href="https://github.com/lmitchell4/Tasker" target="_blank">Check out Tasker</a></p>
+        </div>
+        <div class="col-md-4">
+          <img src="img/alphabet.png" class="img-responsive center-block project-logo" alt="Alphabet Game Logo"
+            data-toggle="modal" data-target="#alphabet">
+          <h3>Alphabet Game</h3>
+          <p><a href="https://github.com/lmitchell4/AlphabetGame " target="_blank">Check out Alphabet Game</a></p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="text-muted">R</h2>
+        </div>
+      </div>
+      <div id="r" class="row text-center">
+        <div class="col-md-4">
+          <img src="img/sturgeon.png" class="img-responsive center-block project-logo" alt="Sturgeon Logo"
+              data-toggle="modal" data-target="#sturgeon">
+          <h3>Sturgeon</h3>
+          <p><a href="https://github.com/lmitchell4/SturgeonBroodYearModel" target="_blank">Check out Sturgeon</a></p>
+        </div>
+        <div class="col-md-4">
+          <img src="img/recharge.png" class="img-responsive center-block project-logo" alt="Recharge Logo"
+            data-toggle="modal" data-target="#recharge">
+          <h3>Recharge</h3>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="text-muted">JavaScript</h2>
+        </div>
+      </div>
+      <div id="javascript" class="row text-center">
+        <div class="col-md-4">
+          <img src="img/matching.png" class="img-responsive center-block project-logo" alt="Matching Game Logo"
+            data-toggle="modal" data-target="#matching">
+          <h3>Matching Game</h3>
+          <p><a href="https://github.com/lmitchell4/matching-game" target="_blank">Check out Matching Game</a></p>
+        </div>
+      </div>
+
+      
+      <!-- Modals -->
+      <div class="modal fade" id="tournament" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title" id="tournamentModal">Tournament Organizer</h4>
+            </div>
+            <div class="modal-body">
+              <img src="img/tournament_small.png" class="img-responsive modal-image" alt="Tournament Organizer Logo">
+              <p>This is a Python program for organizing multi-player tournaments using the 
+              Swiss pairing system and recording the results in a PostgreSQL database.  I wrote 
+              a custom algorithm that generates matches between players of comparable skill levels 
+              while preventing rematches between players.  The program can also accommodate an odd 
+              number of players, in which case a different player is assigned a bye in each round 
+              of the tournament.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="modal fade" id="blog" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title" id="blogModal">Alpha Blog</h4>
+            </div>
+            <div class="modal-body">
+              <img src="img/blog_small.png" class="img-responsive modal-image" alt="Alpha Blog Logo">
+              <p>This is a template for a blogging website that allows users to create, 
+              edit, and delete blog posts, as well as comment on and rate posts. It uses 
+              the Google App Engine Python Standard Environment and is designed to be 
+              hosted on the Google Cloud Platform.  The website has a responsive design 
+              based on the Bootstrap framework.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="movie" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title" id="movieModal">Fresh Tomatoes</h4>
+            </div>
+            <div class="modal-body ">
+              <img src="img/fresh_tomatoes_small.png" class="img-responsive modal-image" alt="Fresh Tomatoes Logo">
+              <p>This Python program generates a website that displays trailers for 
+              movies and TV shows.  I was familiar with classes from programming in 
+              other languages, but this was an opportunity to work with classes in 
+              Python for one of the first times.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="tasker" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title" id="taskerModal">Tasker</h4>
+            </div>
+            <div class="modal-body">
+              <img src="img/tasker_small.png" class="img-responsive modal-image" alt="Tasker Logo">
+              <p>Tasker is a simple Android app for creating to-do lists. 
+              This was my first time playing with Android Studio so much time was 
+              spent learning to use activities, bundles, and intents.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="alphabet" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title" id="alphabetModal">Alphabet Game</h4>
+            </div>
+            <div class="modal-body">
+              <img src="img/alphabet_small.png" class="img-responsive modal-image" alt="Alphabet Game Logo">
+              <p>This is a game designed to help young children learn the alphabet. 
+              Players are shown a sequence of consecutive letters with some letters 
+              missing, and need to decide which letters are missing.  I created this 
+              game as a Swing application because I enjoy programming in Java and 
+              figuring out how to best structure the classes in my programs.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="sturgeon" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title" id="sturgeonModal">Sturgeon</h4>
+            </div>
+            <div class="modal-body">
+              <img src="img/sturgeon_small.png" class="img-responsive modal-image" alt="Sturgeon Logo">
+              <p>This is a statistical model designed to estimate the brood year 
+              strength of white sturgeon in the San Francisco Estuary using age 
+              and length data. It is written in R, and has a Shiny interface that 
+              allows the user to try out different inputs. For example, you can 
+              choose which years to include or exclude in the model, change the 
+              binning scheme of the fish length data, and choose the type of growth 
+              model to apply.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="modal fade" id="recharge" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title" id="rechargeModal">Recharge</h4>
+            </div>
+            <div class="modal-body">
+              <img src="img/recharge_small.png" class="img-responsive modal-image" alt="Recharge Logo">
+              <p>This was a collaborative USGS research project resulting in the 
+              development of a method for estimating water-table recharge from 
+              discrete rain events (<a href="https://www.ncbi.nlm.nih.gov/pubmed/24588378" target="_blank">link to article</a>). 
+              I wrote an R program implementing the method that is available upon 
+              request from the lead author.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="modal fade" id="matching" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title" id="matchingModal">Matching Game</h4>
+            </div>
+            <div class="modal-body">
+              <img src="img/matching_small.png" class="img-responsive modal-image" alt="Matching Game Logo">
+              <p>This is a simple web-based matching game where the user clicks 
+              on tiles with hidden images and tries to match up tiles with the 
+              same image.  I created this game because I really wanted to play 
+              with JavaScript and jQuery and see if I could carry out all the 
+              features I had envisioned – from the animated message board in 
+              the top right corner, to the speed controls that allow you to 
+              choose how long mismatched tiles remain visible, to the hint button 
+              that helps you out when you can’t find a match.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div><!-- container -->
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
