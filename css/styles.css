@@ -7,12 +7,12 @@ body {
   font-family: "Varela+Round", sans-serif;
   /* font-family: 'Roboto Mono', monospace; */
   /* background-color: #383838; */
-  background-color: #31333b;
+  /* background-color: #31333b; */
   font-weight: 300;
 }
 
 .container {
-  background-color: #fff;
+  /* background-color: #fff; */
 }
 
 #header {
@@ -26,6 +26,10 @@ body {
   color: #FA837B;
   font-size: 50px;
   margin: 15px 0 15px 100px;
+}
+
+.header-shadow {
+  box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2);
 }
 
 .main-panel {
