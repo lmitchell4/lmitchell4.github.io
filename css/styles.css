@@ -15,6 +15,23 @@ body {
   background-color: #fff;
 }
 
+#header {
+  height: 80px;
+  background-color: #fff;
+  /* background-color: #FA837B; */
+  /* background-color: #099DD9; */
+}
+
+#header-brand {
+  color: #FA837B;
+  font-size: 50px;
+  margin: 15px 0 15px 100px;
+}
+
+.main-panel {
+  margin-top: 80px;
+}
+
 .text-muted {
   color: #555455;
 }
