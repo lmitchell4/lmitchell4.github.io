@@ -339,7 +339,7 @@ your constant variance assumption has been violated. Transforming your observati
 <span class="math inline">\(y_i\)</span>, can sometimes help with this. For example, you could try fitting the model
 using <span class="math inline">\(\log(y_i)\)</span> or <span class="math inline">\(\sqrt{y_i}\)</span> in place of <span class="math inline">\(y_i\)</span>.</p>
 <div class="figure" style="text-align: center"><span id="fig:resid-plot-1"></span>
-<img src="_main_files/figure-html/resid-plot-1-1.png" alt="Example residual vs. fitted value plots showing no pattern (left) and an increasing pattern (right)." width="768" />
+<img src="main_files/figure-html/resid-plot-1-1.png" alt="Example residual vs. fitted value plots showing no pattern (left) and an increasing pattern (right)." width="768" />
 <p class="caption">
 Figure 6.1: Example residual vs. fitted value plots showing no pattern (left) and an increasing pattern (right).
 </p>
@@ -349,14 +349,14 @@ variable <span class="math inline">\(x\)</span>. The left plot again shows no pa
 right plot shows curvature indicating that additional explanatory terms (for
 example, perhaps a quadratic term, <span class="math inline">\(x^2\)</span>) may be needed.</p>
 <div class="figure" style="text-align: center"><span id="fig:resid-plot-2"></span>
-<img src="_main_files/figure-html/resid-plot-2-1.png" alt="Example residual vs. explanatory variable plots showing no pattern (left) and a curved pattern (right)." width="768" />
+<img src="main_files/figure-html/resid-plot-2-1.png" alt="Example residual vs. explanatory variable plots showing no pattern (left) and a curved pattern (right)." width="768" />
 <p class="caption">
 Figure 6.2: Example residual vs. explanatory variable plots showing no pattern (left) and a curved pattern (right).
 </p>
 </div>
 <p>To check the assumption that the errors are normally distributed, you can use a qq plot:</p>
 <div class="figure" style="text-align: center"><span id="fig:resid-plot-3"></span>
-<img src="_main_files/figure-html/resid-plot-3-1.png" alt="Example residual qq plots showing agreement with normality (left) and a departure from normality (right)." width="768" />
+<img src="main_files/figure-html/resid-plot-3-1.png" alt="Example residual qq plots showing agreement with normality (left) and a departure from normality (right)." width="768" />
 <p class="caption">
 Figure 6.3: Example residual qq plots showing agreement with normality (left) and a departure from normality (right).
 </p>
@@ -394,7 +394,7 @@ of the data set and a plot of the dependent variable versus the independent vari
 ## 6 13.475845 23.079144</code></pre>
 <div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb65-1" data-line-number="1"><span class="kw">plot</span>(dat<span class="op">$</span>x, dat<span class="op">$</span>y, <span class="dt">xlab=</span><span class="st">&quot;x&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;y&quot;</span>)</a></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-18"></span>
-<img src="_main_files/figure-html/unnamed-chunk-18-1.png" alt="Data from the linear regression example." width="432" />
+<img src="main_files/figure-html/unnamed-chunk-18-1.png" alt="Data from the linear regression example." width="432" />
 <p class="caption">
 Figure 6.4: Data from the linear regression example.
 </p>
@@ -460,7 +460,7 @@ squares:</p>
 <div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb73-1" data-line-number="1"><span class="kw">par</span>(<span class="dt">mfrow=</span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">2</span>))</a>
 <a class="sourceLine" id="cb73-2" data-line-number="2"><span class="kw">plot</span>(fit0)</a></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-23"></span>
-<img src="_main_files/figure-html/unnamed-chunk-23-1.png" alt="Diagnostic plots produced by plot()." width="768" />
+<img src="main_files/figure-html/unnamed-chunk-23-1.png" alt="Diagnostic plots produced by plot()." width="768" />
 <p class="caption">
 Figure 6.5: Diagnostic plots produced by plot().
 </p>
@@ -640,7 +640,7 @@ model. If you want model predicted values for different inputs, you can use the
 <a class="sourceLine" id="cb99-5" data-line-number="5">                                        <span class="st">&quot;Predicted values from predict()&quot;</span>), <span class="dt">col=</span><span class="kw">c</span>(<span class="st">&quot;black&quot;</span>,<span class="st">&quot;blue&quot;</span>,<span class="st">&quot;orange&quot;</span>),</a>
 <a class="sourceLine" id="cb99-6" data-line-number="6">            <span class="dt">pch=</span><span class="dv">1</span>)</a></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-31"></span>
-<img src="_main_files/figure-html/unnamed-chunk-31-1.png" alt="Observations and model predicted values." width="480" />
+<img src="main_files/figure-html/unnamed-chunk-31-1.png" alt="Observations and model predicted values." width="480" />
 <p class="caption">
 Figure 6.6: Observations and model predicted values.
 </p>
@@ -663,7 +663,7 @@ Figure 6.6: Observations and model predicted values.
 <div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb108-1" data-line-number="1"><span class="kw">par</span>(<span class="dt">mfrow=</span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">2</span>))</a>
 <a class="sourceLine" id="cb108-2" data-line-number="2"><span class="kw">plot</span>(fit)</a></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:ex-simple-lin-reg-11"></span>
-<img src="_main_files/figure-html/ex-simple-lin-reg-11-1.png" alt="Diagnostic plots produced by plot()." width="768" />
+<img src="main_files/figure-html/ex-simple-lin-reg-11-1.png" alt="Diagnostic plots produced by plot()." width="768" />
 <p class="caption">
 Figure 6.7: Diagnostic plots produced by plot().
 </p>
@@ -701,7 +701,7 @@ we can calculate the group means and variances:</p>
 <p>and use <code>boxplot()</code> to plot the data:</p>
 <div class="sourceCode" id="cb115"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb115-1" data-line-number="1"><span class="kw">boxplot</span>(yields, <span class="dt">col=</span><span class="st">&quot;green3&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;Yield&quot;</span>)</a></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-36"></span>
-<img src="_main_files/figure-html/unnamed-chunk-36-1.png" alt="Boxplot of the crop yield data." width="480" />
+<img src="main_files/figure-html/unnamed-chunk-36-1.png" alt="Boxplot of the crop yield data." width="480" />
 <p class="caption">
 Figure 6.8: Boxplot of the crop yield data.
 </p>
@@ -737,7 +737,7 @@ look satisfactorily normal:</p>
 <div class="sourceCode" id="cb120"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb120-1" data-line-number="1"><span class="kw">qqnorm</span>(yields_long<span class="op">$</span>Yield)</a>
 <a class="sourceLine" id="cb120-2" data-line-number="2"><span class="kw">qqline</span>(yields_long<span class="op">$</span>Yield, <span class="dt">lty=</span><span class="dv">2</span>)</a></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-38"></span>
-<img src="_main_files/figure-html/unnamed-chunk-38-1.png" alt="Checking normality of the crop yield data." width="480" />
+<img src="main_files/figure-html/unnamed-chunk-38-1.png" alt="Checking normality of the crop yield data." width="480" />
 <p class="caption">
 Figure 6.9: Checking normality of the crop yield data.
 </p>
@@ -777,7 +777,7 @@ of the treatment means are the same.</p>
 <div class="sourceCode" id="cb125"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb125-1" data-line-number="1"><span class="kw">par</span>(<span class="dt">mfrow=</span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">2</span>))</a>
 <a class="sourceLine" id="cb125-2" data-line-number="2"><span class="kw">plot</span>(yield_aov)</a></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-41"></span>
-<img src="_main_files/figure-html/unnamed-chunk-41-1.png" alt="Diagnostic plots for the ANVOA model." width="768" />
+<img src="main_files/figure-html/unnamed-chunk-41-1.png" alt="Diagnostic plots for the ANVOA model." width="768" />
 <p class="caption">
 Figure 6.10: Diagnostic plots for the ANVOA model.
 </p>

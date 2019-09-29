@@ -310,7 +310,7 @@ Figure 2.2: A symmetric data distribution (black) and a right skewed distributio
 </div>
 <p>We will assess symmetry more in the data visualization section. One mathematical indication that data are skewed is if the mean and median are not very close in value. Using the same skewed distribution as above, the figure below shows that the mean of the distribution is larger than the median. This happens because the mean is more sensitive to extreme values than the median. If the mean is lower than the median, it indicates that the data are left-skewed. If you find that the mean and median are very different, it is important to investigate whether a single (or a few) extreme values are causing the skew. In the case where a few values are very high or very low, it is a good idea to investigate the data to see if there is a problem (e.g., a typo or equiment malfunction) before deciding how to proceed.</p>
 <div class="figure" style="text-align: center"><span id="fig:math-skew-fig"></span>
-<img src="_main_files/figure-html/math-skew-fig-1.png" alt="A right skewed distribution (solid black line) with vertical dotted lines indicating the mean (black) and median (median)." width="480" />
+<img src="main_files/figure-html/math-skew-fig-1.png" alt="A right skewed distribution (solid black line) with vertical dotted lines indicating the mean (black) and median (median)." width="480" />
 <p class="caption">
 Figure 2.3: A right skewed distribution (solid black line) with vertical dotted lines indicating the mean (black) and median (median).
 </p>
@@ -376,7 +376,7 @@ Figure 2.3: A right skewed distribution (solid black line) with vertical dotted 
 <h2><span class="header-section-number">2.3</span> Data visualization</h2>
 <p>One of the best ways to get an overview of a dataset is to graph it. Graphing data helps you see patterns that might be important for your analysis and it gives you a broader context for any of the summary statistics that we just talked about. In this section, we will discuss some ways to graph (or plot) data and the information that each type of graph can help you find. Many tutorials and text books will beg you to “graph your data first”.</p>
 <p>There are many ways to make graphs in R. The biggest debate you’ll hear is “base graphics” v. “ggplot”. Each have their strengths, but we’re going to use base graphics (i.e., the built-in graphics package that comes with R) in this course. Why? We don’t have time to do both so we picked one.</p>
-<p>Keep in mind that making graphs is an iterative process. You’ll almost never make a graph in one try. Instead, plan on making a graph and then adjusting the code until the graph matches what you are happy with the result.</p>
+<p>Keep in mind that making graphs is an iterative process. You’ll almost never make a graph in one try. Instead, plan on making a graph and then adjusting the code until the graph matches what you wanted to produce.</p>
 <div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb41-1" data-line-number="1"><span class="co"># Make a toy dataset to work with</span></a>
 <a class="sourceLine" id="cb41-2" data-line-number="2"><span class="kw">set.seed</span>(<span class="dv">21</span>) <span class="co"># make sure we always use the same values for reproducibility</span></a>
 <a class="sourceLine" id="cb41-3" data-line-number="3">fish &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">group =</span> <span class="kw">as.factor</span>(<span class="kw">rep</span>(<span class="kw">c</span>(<span class="st">&quot;salmon&quot;</span>, <span class="st">&quot;bass&quot;</span>, <span class="st">&quot;smelt&quot;</span>), <span class="dt">each =</span> <span class="dv">20</span>)),</a>
@@ -411,16 +411,16 @@ A histogram groups the data into bins and the heights of the bars show the frequ
 <p>We’ll use the function hist to make a histogram. We’re going to use what is known as “dollar sign notation” to specify that the dataset fish contains the variable fl. It looks like this: “fish$fl”. A generic form is “dataset$variable”.</p>
 <div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb45-1" data-line-number="1"><span class="kw">hist</span>(fish<span class="op">$</span>fl)</a></code></pre></div>
 <div class="figure" style="text-align: center">
-<img src="_main_files/figure-html/hist1_fig-1.png" alt="A histogram of fork length, using the default settings." width="480" />
+<img src="main_files/figure-html/hist1_fig-1.png" alt="A histogram of fork length, using the default settings." width="480" />
 <p class="caption">
 (#fig:hist1_fig)A histogram of fork length, using the default settings.
 </p>
 </div>
 <p>The center of fl is around 70 and it’s fairly symmetrical. Maybe those boxes are a little too wide for our taste. We want to look at smaller bins, so let’s add an argument to hist that will make the boxes narrower.</p>
-<p>In R, when a function takes more than one argument, the arguments are separated by commas. In the example below, we’re naming the arguments “x” and “breaks” so that R will know which argument is which. If you aren’t sure which arguments a function can take, use the help in R. Use a question mark to search for a function. For example, “?hist” will bring up the help file for the hist function, with a list of the artuments that the function can take.</p>
+<p>In R, when a function takes more than one argument, the arguments are separated by commas. In the example below, we’re naming the arguments “x” and “breaks” so that R will know which argument is which. If you aren’t sure which arguments a function can take, use the help in R. Use a question mark to search for a function. For example, “?hist” will bring up the help file for the hist function, with a list of the arguments that the function can take.</p>
 <div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb46-1" data-line-number="1"><span class="kw">hist</span>(<span class="dt">x =</span> fish<span class="op">$</span>fl, <span class="dt">breaks =</span> <span class="dv">16</span>)</a></code></pre></div>
 <div class="figure" style="text-align: center">
-<img src="_main_files/figure-html/hist2_fig-1.png" alt="A histogram of fork length with narrower bins." width="480" />
+<img src="main_files/figure-html/hist2_fig-1.png" alt="A histogram of fork length with narrower bins." width="480" />
 <p class="caption">
 (#fig:hist2_fig)A histogram of fork length with narrower bins.
 </p>
@@ -430,7 +430,7 @@ Boxplots are another good way to see the center, spread, and symmetry of your da
 <p>The heavy line in the middle is the median. The top and bottom of the box are the third and first quartiles, respectively. This is called the “interquartile range” and it shows the middle half of the data. The whiskers are 1.5 times the distance between the first and third quartiles. If there are any extreme values outside the whiskers, they are marked with circles. The width of the box is not meaningful.</p>
 <div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb47-1" data-line-number="1"><span class="kw">boxplot</span>(fish<span class="op">$</span>fl)</a></code></pre></div>
 <div class="figure" style="text-align: center">
-<img src="_main_files/figure-html/boxplot1_fig-1.png" alt="A boxplot of fork length." width="480" />
+<img src="main_files/figure-html/boxplot1_fig-1.png" alt="A boxplot of fork length." width="480" />
 <p class="caption">
 (#fig:boxplot1_fig)A boxplot of fork length.
 </p>
@@ -439,13 +439,13 @@ Boxplots are another good way to see the center, spread, and symmetry of your da
 <p>What if we want to look at a separate boxplot for each group? The boxplot function takes a formula for its first argument. The generic form of the formula is y ~ group, where y is your numeric variable of interest and group is the grouping variable. You still use the dollar sign notation, like we did before. Notice that we use the dataset name “fish” for both variables.</p>
 <div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb48-1" data-line-number="1"><span class="kw">boxplot</span>(fish<span class="op">$</span>fl <span class="op">~</span><span class="st"> </span>fish<span class="op">$</span>group)</a></code></pre></div>
 <div class="figure" style="text-align: center">
-<img src="_main_files/figure-html/boxplot2_fig-1.png" alt="A boxplot of fork lengths divided into groups." width="480" />
+<img src="main_files/figure-html/boxplot2_fig-1.png" alt="A boxplot of fork lengths divided into groups." width="480" />
 <p class="caption">
 (#fig:boxplot2_fig)A boxplot of fork lengths divided into groups.
 </p>
 </div>
 <p><strong>Q-Q Plots</strong></p>
-<p>One question that comes up a lot is “is this data normal”? Often, we care about whether data is normally distributed because a statistical test that we are considering using assumes that the data are normally distributed.</p>
+<p>One question that comes up a lot is “are these data normal”? Often, we care about whether data is normally distributed because a statistical test that we are considering using assumes that the data are normally distributed.</p>
 <p>Q-Q Plots are a way to compare your data to a normal distribution. Q-Q stands for quantile-quantile, and you can think of it as “normal distribution quantiles v. sample quantiles”. Anywhere the points fall above the line, it means the value is more frequent than expected in a normal distribution. Below the line means it’s less frequent.</p>
 <div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb49-1" data-line-number="1"><span class="co"># draw the graph of your data in Q-Q format</span></a>
 <a class="sourceLine" id="cb49-2" data-line-number="2"><span class="kw">qqnorm</span>(fish<span class="op">$</span>fl)</a>
@@ -453,7 +453,7 @@ Boxplots are another good way to see the center, spread, and symmetry of your da
 <a class="sourceLine" id="cb49-4" data-line-number="4"><span class="co"># add a line that represents a perfectly normal dataset</span></a>
 <a class="sourceLine" id="cb49-5" data-line-number="5"><span class="kw">qqline</span>(fish<span class="op">$</span>fl, <span class="dt">col =</span> <span class="st">&quot;red&quot;</span>, <span class="dt">lwd =</span> <span class="dv">2</span>)</a></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:qq-fig"></span>
-<img src="_main_files/figure-html/qq-fig-1.png" alt="A normal Q-Q plot of fork length." width="480" />
+<img src="main_files/figure-html/qq-fig-1.png" alt="A normal Q-Q plot of fork length." width="480" />
 <p class="caption">
 Figure 2.4: A normal Q-Q plot of fork length.
 </p>
@@ -472,7 +472,7 @@ Figure 2.4: A normal Q-Q plot of fork length.
 <p>The plot function makes graphs of two variables. The most basic type is a scatterplot.</p>
 <div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb50-1" data-line-number="1"><span class="kw">plot</span>(<span class="dt">x =</span> fish<span class="op">$</span>sal, <span class="dt">y =</span> fish<span class="op">$</span>fl)</a></code></pre></div>
 <div class="figure" style="text-align: center">
-<img src="_main_files/figure-html/scatter1_fig-1.png" alt="A scatter plot of salinity and fork length, using the default settings in the plot function." width="576" />
+<img src="main_files/figure-html/scatter1_fig-1.png" alt="A scatter plot of salinity and fork length, using the default settings in the plot function." width="576" />
 <p class="caption">
 (#fig:scatter1_fig)A scatter plot of salinity and fork length, using the default settings in the plot function.
 </p>
@@ -486,7 +486,7 @@ Figure 2.4: A normal Q-Q plot of fork length.
 <a class="sourceLine" id="cb51-5" data-line-number="5"><span class="kw">plot</span>(<span class="dt">x =</span> fish<span class="op">$</span>sal, <span class="dt">y =</span> fish<span class="op">$</span>fl,</a>
 <a class="sourceLine" id="cb51-6" data-line-number="6">     <span class="dt">type =</span> <span class="st">&quot;l&quot;</span>)</a></code></pre></div>
 <div class="figure" style="text-align: center">
-<img src="_main_files/figure-html/scatter2_fig-1.png" alt="A line plot of salinity and fork length, using the default settings in the plot function." width="576" />
+<img src="main_files/figure-html/scatter2_fig-1.png" alt="A line plot of salinity and fork length, using the default settings in the plot function." width="576" />
 <p class="caption">
 (#fig:scatter2_fig)A line plot of salinity and fork length, using the default settings in the plot function.
 </p>
@@ -495,7 +495,7 @@ Figure 2.4: A normal Q-Q plot of fork length.
 <p>For categorical variables, you might want to graph the count of different groups in your data. We can create a bar graph of our fish group data using the functions barplot and table. This figure is pretty boring because each of the groups appears 20 times, but it gives you an idea of how the code works.</p>
 <div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb52-1" data-line-number="1"><span class="kw">barplot</span>(<span class="kw">table</span>(fish<span class="op">$</span>group))</a></code></pre></div>
 <div class="figure" style="text-align: center">
-<img src="_main_files/figure-html/barplot_fig-1.png" alt="A bar plot of fish groups." width="576" />
+<img src="main_files/figure-html/barplot_fig-1.png" alt="A bar plot of fish groups." width="576" />
 <p class="caption">
 (#fig:barplot_fig)A bar plot of fish groups.
 </p>
@@ -590,7 +590,7 @@ Figure 2.4: A normal Q-Q plot of fork length.
 <a class="sourceLine" id="cb53-4" data-line-number="4">     <span class="dt">xlab =</span> <span class="st">&quot;Salinity (psu)&quot;</span>,</a>
 <a class="sourceLine" id="cb53-5" data-line-number="5">     <span class="dt">ylab =</span> <span class="st">&quot;Fork Lengh (mm)&quot;</span>)</a></code></pre></div>
 <div class="figure" style="text-align: center">
-<img src="_main_files/figure-html/scatter3_fig-1.png" alt="A scatter plot of salinity and fork length, with red triangles for markers." width="576" />
+<img src="main_files/figure-html/scatter3_fig-1.png" alt="A scatter plot of salinity and fork length, with red triangles for markers." width="576" />
 <p class="caption">
 (#fig:scatter3_fig)A scatter plot of salinity and fork length, with red triangles for markers.
 </p>
@@ -608,7 +608,7 @@ Figure 2.4: A normal Q-Q plot of fork length.
 <a class="sourceLine" id="cb54-7" data-line-number="7">     <span class="dt">pos =</span> <span class="dv">1</span>, <span class="co">#places text below the points.</span></a>
 <a class="sourceLine" id="cb54-8" data-line-number="8">     <span class="dt">cex =</span> <span class="fl">0.8</span>) <span class="co">#makes the text smaller</span></a></code></pre></div>
 <div class="figure" style="text-align: center">
-<img src="_main_files/figure-html/scatter4_fig-1.png" alt="A scatter plot of salinity and fork length, with red triangle markers and group labels." width="576" />
+<img src="main_files/figure-html/scatter4_fig-1.png" alt="A scatter plot of salinity and fork length, with red triangle markers and group labels." width="576" />
 <p class="caption">
 (#fig:scatter4_fig)A scatter plot of salinity and fork length, with red triangle markers and group labels.
 </p>
@@ -623,7 +623,7 @@ Figure 2.4: A normal Q-Q plot of fork length.
 <a class="sourceLine" id="cb55-7" data-line-number="7">     <span class="dt">pos =</span> <span class="dv">1</span>, <span class="co">#places text below the points.</span></a>
 <a class="sourceLine" id="cb55-8" data-line-number="8">     <span class="dt">cex =</span> <span class="fl">0.8</span>) <span class="co">#makes the text smaller</span></a></code></pre></div>
 <div class="figure" style="text-align: center">
-<img src="_main_files/figure-html/scatter5_fig-1.png" alt="A scatter plot of salinity and fork length, with different colored symbols and text labels." width="576" />
+<img src="main_files/figure-html/scatter5_fig-1.png" alt="A scatter plot of salinity and fork length, with different colored symbols and text labels." width="576" />
 <p class="caption">
 (#fig:scatter5_fig)A scatter plot of salinity and fork length, with different colored symbols and text labels.
 </p>
@@ -639,7 +639,7 @@ Figure 2.4: A normal Q-Q plot of fork length.
 <a class="sourceLine" id="cb56-8" data-line-number="8">     <span class="dt">bty =</span> <span class="st">&quot;l&quot;</span>)</a>
 <a class="sourceLine" id="cb56-9" data-line-number="9"><span class="kw">legend</span>(<span class="st">&quot;topleft&quot;</span>, <span class="dt">pch =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">3</span>, <span class="dt">col =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">3</span>, <span class="dt">pt.lwd =</span> <span class="dv">2</span>, <span class="dt">legend =</span> <span class="kw">levels</span>(fish<span class="op">$</span>group))</a></code></pre></div>
 <div class="figure" style="text-align: center">
-<img src="_main_files/figure-html/scatter6_fig-1.png" alt="A scatter plot of salinity and fork length, that might be ready to go into a report." width="576" />
+<img src="main_files/figure-html/scatter6_fig-1.png" alt="A scatter plot of salinity and fork length, that might be ready to go into a report." width="576" />
 <p class="caption">
 (#fig:scatter6_fig)A scatter plot of salinity and fork length, that might be ready to go into a report.
 </p>
@@ -647,7 +647,7 @@ Figure 2.4: A normal Q-Q plot of fork length.
 </div>
 <div id="exporting-graphics" class="section level3">
 <h3><span class="header-section-number">2.4.3</span> Exporting graphics</h3>
-<p>R can export figures as .bmp, .jpg, .tiff, .png, and .pdf files. There are functions to write each of these types of files and they are all pretty similar, with a few arguments that are specific to each one. We’ll give an example of writing a .png file. For each type of file, you write three chunks of code: the graphics device (png in this case), the code that make the graph, and a function that closes the graphics device. It looks like this:</p>
+<p>R can export figures as .bmp, .jpg, .tiff, .png, and .pdf files. There are functions to write each of these types of files and they are all pretty similar, with a few arguments that are specific to each one. We’ll give an example of writing a .png file. For each type of file, you write three chunks of code: the graphics device (png in this case), the code that makes the graph, and a function that closes the graphics device. It looks like this:</p>
 <div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb57-1" data-line-number="1"><span class="co"># # 1. graphics window</span></a>
 <a class="sourceLine" id="cb57-2" data-line-number="2"><span class="co"># png(filename = plot.png, </span></a>
 <a class="sourceLine" id="cb57-3" data-line-number="3"><span class="co">#     width = 6, height = 4, units = &quot;in&quot;, #4x6 inch figure</span></a>
